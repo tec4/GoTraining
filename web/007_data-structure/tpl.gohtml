@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+</head>
+<body>
+
+{{template "polarbear"}}
+<p>{{index . 2 }}</p>
+<ul>
+    {{range $key, $val := .}}
+    <li>{{$key}} - {{ $val | uc }}</li>
+    {{end}}
+</ul>
+</body>
+</html>
